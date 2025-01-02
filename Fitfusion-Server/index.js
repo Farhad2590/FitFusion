@@ -6,12 +6,13 @@ const app = express()
 const { connectToDatabase } = require('./config/db');
 const userRoute = require('./routes/userRoute');
 const workOutRoute = require('./routes/workOutRoute');
+const nutritionRoutes = require('./routes/nutritionRoutes');
 
 app.use(cors())
 app.use(express.json())
 
 connectToDatabase()
-app.use('/', userRoute,workOutRoute)
+app.use('/', userRoute,workOutRoute,nutritionRoutes)
 app.get('/', (req, res) => {
     res.send('server is running')
 })

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import banner from '../../assets/Banner.png';
 
 import React from 'react';
@@ -55,8 +56,8 @@ const Banner = () => {
                 </ul>
 
                 {/* CTA Button */}
-                <a
-                    href="#join"
+                <Link
+                    to="/signup"
                     className="bg-red-500 px-4 sm:px-6 py-2 text-sm sm:text-base md:text-lg 
                            rounded-full font-semibold 
                            hover:bg-red-600 transition-all duration-300
@@ -64,7 +65,7 @@ const Banner = () => {
                            shadow-lg hover:shadow-xl"
                 >
                     JOIN US
-                </a>
+                </Link>
             </div>
 
             {/* Animations */}
